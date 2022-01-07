@@ -48,6 +48,12 @@ jobs:
         with:
           submodules: true
       -
+        name: Checkout manifests
+        uses: actions/checkout@v2
+        with:
+          repository: combat-detection/manifests
+          path: manifests/
+      -
         name: Setup Python
         uses: actions/setup-python@v2
         with:
@@ -67,5 +73,4 @@ jobs:
           REPO: self
           BRANCH: docsify
           FOLDER: publish
-          CLEAR_GLOBS_FILE: ".clear-target-files"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
