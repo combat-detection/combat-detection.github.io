@@ -67,4 +67,5 @@ jobs:
           REPO: self
           BRANCH: docsify
           FOLDER: publish
+          CLEAR_GLOBS_FILE: ".clear-target-files"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
