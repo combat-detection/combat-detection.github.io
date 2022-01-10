@@ -50,11 +50,11 @@ def main() -> None:
 
                 if 'name' in bypass:
                     bypass_tweak = f"{markdown_link(bypass['name'], bypasses[bypass['name']]['guide'])}" \
-                                        if 'guide' in bypasses[bypass['name']] \
-                                        else bypass['name']
+                        if 'guide' in bypasses[bypass['name']] \
+                        else bypass['name']
                     bypass_tweak_repo = f" ({markdown_link('repo', bypasses[bypass['name']]['repository']['uri'], sharerepo=True)})" \
-                                            if 'repository' in bypasses[bypass['name']] \
-                                            else ''
+                        if 'repository' in bypasses[bypass['name']] \
+                        else ''
                     bypass_tweaks.append(bypass_tweak + bypass_tweak_repo)
 
                     if not downgrade_noted and 'version' in bypass and bypass['name'] != "AppStore++":
@@ -63,11 +63,11 @@ def main() -> None:
                         downgrade_noted = True
 
                     notes_from_bypass = f"{bypasses[bypass['name']]['notes']} " \
-                                            if 'notes' in bypasses[bypass['name']] \
-                                            else ''
+                        if 'notes' in bypasses[bypass['name']] \
+                        else ''
                     notes_from_manifest = bypass['notes'] \
-                                            if 'notes' in bypass \
-                                            else ''
+                        if 'notes' in bypass \
+                        else ''
                     if notes_from_bypass or notes_from_manifest:
                         bypass_notes.append(f"- **{bypass['name']}**: " + notes_from_bypass + notes_from_manifest)
                 elif 'notes' in bypass:
@@ -76,7 +76,7 @@ def main() -> None:
                 else:
                     logger.error(f'{app_file} - Neither name nor notes were supplied for this bypass!')
                     continue
-        table_matrix.append([f"{app_name}", '<br>'.join(filter(None,bypass_versions)),
+        table_matrix.append([f"{app_name}", '<br>'.join(filter(None, bypass_versions)),
                              '<br>'.join(bypass_tweaks), '<br>'.join(bypass_notes)])
 
     table_matrix.sort(key=lambda a: a[0].lower())
