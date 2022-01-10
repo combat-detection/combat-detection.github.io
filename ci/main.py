@@ -5,12 +5,12 @@ import argparse
 from pytablewriter import MarkdownTableWriter
 
 
-def markdown_link(name, uri, sharerepo=False):
+def markdown_link(name: str, uri: str, sharerepo: bool = False) -> str:
     sharerepo_site = "https://sharerepo.stkc.win/?repo="
     return f"[{name}]({sharerepo_site}{uri})" if sharerepo else f"[{name}]({uri})"
 
 
-def main():
+def main() -> None:
     # Setup logging
     logging.basicConfig(level=logging.WARNING, format="%(asctime)s - %(levelname)s - %(message)s")
     logger = logging.getLogger(__name__)
