@@ -24,6 +24,8 @@ KernBypass will not work on iOS 14 using unc0ver. Use [vnodebypass](#vnodebypass
 
 > Users on unc0ver (iOS 14+) must also install Siguza's `libkrw` from Elucubratus, else vnodebypass will fail to enable. If enabling still fails, reinstall libkrw.
 
+!> libkrw is broken on unc0ver (14.6+). vnodebypass will **not** work on those versions.
+
 1. After installation, an app will appear on your homescreen named `vnodebypass`.
 2. Launch it and press the `Enable` button.
 3. When you're done using the app with jailbreak detection, launch the app again and tap `Disable`.
