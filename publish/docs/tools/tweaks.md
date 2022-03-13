@@ -26,11 +26,13 @@ These tools attempt to circumvent detection methods.
 
 ## Hestia
 
-?> Available from [Packix](https://sharerepo.stkc.win/?repo=https://repo.packix.com).
+?> Available from [Havoc](https://sharerepo.stkc.win/?repo=https://havoc.app).
 
 1. Launch Settings
 2. Scroll down and select Hestia
 3. Under `Enabled Applications` toggle the app(s) with jailbreak detection.
+
+> Some applications may require extra patches, please try them if the defaults do not work.
 
 ## Liberty Lite (Beta)
 
